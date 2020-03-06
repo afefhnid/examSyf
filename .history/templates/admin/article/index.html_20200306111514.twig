@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col">
+			<h1>Gestion des Article</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+
+			{% include '_inc/flash.messages.html.twig' %}
+
+			<p class="text-right">
+				<a href="{{ url('admin.product.form') }}" class="btn btn-primary">Ajouter</a>
+			</p>
+			<table class="table table-striped">
+				<tr>
+					<th>Image</th>
+					<th>Nom</th>
+					<th>Prix</th>
+					<th>CatÃ©gorie</th>
+					<th></th>
+				</tr>
+				{% for product in results %}
+					<tr>
+						<td class="w-25">
+							<img src="{{ asset('img/product/' ~ product.image) }}" class="img-fluid" alt="">
+						</td>
+						<td>{{ product.name }}</td>
+						<td>{{ product.price }}â‚¬</td>
+						<td>{{ product.category.name}}</td>
+						<td class="text-right">
+							<a href="{{ url('admin.product.form.update', { id: product.id }) }}" class="btn btn-warning">Modifier</a>
+							<a href="{{ url('admin.product.delete', { id: product.id }) }}" class="btn btn-danger">Supprimer</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}
