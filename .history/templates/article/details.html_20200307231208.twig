@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col-sm-3">
+			<img src="/img/article/{{  article.image}}" class="img-fluid" alt="">
+		</div>
+		<div class="col-sm-9">
+			<h3>{{ article.name }}</h3>
+			<p>{{ article.description }}</p>
+
+			<hr>
+			<p class="h6">
+				<span class="font-weight-bold">CatÃ©gorie :</span>
+				{{ product.continent.name }}</p>
+		</div>
+	</div>
+{% endblock %}

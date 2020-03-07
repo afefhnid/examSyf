@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row">
+		<div class="col">
+			<h1>Article</h1>
+		</div>
+	</div>
+	<div class="row">
+
+		{% for continent in results %}
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<th scope="row">1</th>
+						<td>{{ continent.name }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			{% for article in continent.articles %}
+
+				<div class="col-sm-3">
+					<img src="/img/article/{{  article.image}}" class="img-fluid" alt="">
+					<h4>{{ article.name }}</h4>
+
+					{#<p>
+																																																													<a href="{{ url('product.details', { id: product.id }) }}" class="btn btn-primary">Visualiser</a>
+																																																							
+																																																												</p>#}
+				</div>
+			{% endfor %}
+		{% endfor %}
+
+
+	</div>
+{% endblock %}

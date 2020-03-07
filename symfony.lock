@@ -223,6 +223,9 @@
             "./.env"
         ]
     },
+    "symfony/form": {
+        "version": "v5.0.5"
+    },
     "symfony/framework-bundle": {
         "version": "4.4",
         "recipe": {
@@ -247,6 +250,12 @@
         "version": "v5.0.5"
     },
     "symfony/http-kernel": {
+        "version": "v5.0.5"
+    },
+    "symfony/inflector": {
+        "version": "v5.0.5"
+    },
+    "symfony/intl": {
         "version": "v5.0.5"
     },
     "symfony/maker-bundle": {
@@ -278,10 +287,22 @@
             "./config/packages/test/monolog.yaml"
         ]
     },
+    "symfony/options-resolver": {
+        "version": "v5.0.5"
+    },
     "symfony/orm-pack": {
         "version": "v1.0.8"
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.14.0"
+    },
+    "symfony/polyfill-intl-icu": {
+        "version": "v1.14.0"
+    },
     "symfony/polyfill-intl-idn": {
+        "version": "v1.14.0"
+    },
+    "symfony/polyfill-intl-normalizer": {
         "version": "v1.14.0"
     },
     "symfony/polyfill-mbstring": {
@@ -292,6 +313,9 @@
     },
     "symfony/profiler-pack": {
         "version": "v1.0.4"
+    },
+    "symfony/property-access": {
+        "version": "v5.0.5"
     },
     "symfony/routing": {
         "version": "4.2",
@@ -311,6 +335,9 @@
         "version": "v2.0.1"
     },
     "symfony/stopwatch": {
+        "version": "v5.0.5"
+    },
+    "symfony/string": {
         "version": "v5.0.5"
     },
     "symfony/translation-contracts": {
@@ -336,6 +363,19 @@
     "symfony/twig-pack": {
         "version": "v1.0.0"
     },
+    "symfony/validator": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "d902da3e4952f18d3bf05aab29512eb61cabd869"
+        },
+        "files": [
+            "./config/packages/test/validator.yaml",
+            "./config/packages/validator.yaml"
+        ]
+    },
     "symfony/var-dumper": {
         "version": "v5.0.5"
     },
@@ -354,6 +394,25 @@
             "./config/packages/dev/web_profiler.yaml",
             "./config/packages/test/web_profiler.yaml",
             "./config/routes/dev/web_profiler.yaml"
+        ]
+    },
+    "symfony/webpack-encore-bundle": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.6",
+            "ref": "69e1d805ad95964088bd510c05995e87dc391564"
+        },
+        "files": [
+            "./assets/css/app.css",
+            "./assets/js/app.js",
+            "./config/packages/assets.yaml",
+            "./config/packages/prod/webpack_encore.yaml",
+            "./config/packages/test/webpack_encore.yaml",
+            "./config/packages/webpack_encore.yaml",
+            "./package.json",
+            "./webpack.config.js"
         ]
     },
     "symfony/yaml": {
