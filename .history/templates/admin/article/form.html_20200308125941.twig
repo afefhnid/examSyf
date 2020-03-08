@@ -16,37 +16,22 @@
 				{{ form_label(form.name, 'Nom:') }}
 				{{ form_widget(form.name ,{ attr:
 							{ class:"form-control",
-								placeholder: 'Saisissez le nom de l Article',
+								placeholder: 'Saisissez votre prénom',
 								autofocus: 'autofocus'
 							}
 						}) }}
 			</p>
 			<p>
 				{{ form_label(form.description, 'Description:') }}
-				{{ form_widget(form.description,{ attr:
-							{ class:"form-control",
-								placeholder: 'Saisissez la Description ',
-								autofocus: 'autofocus'
-							}
-						}) }}
+				{{ form_widget(form.description) }}
 			</p>
 			<p>
 				{{ form_label(form.image, 'Image:') }}
-				{{ form_widget(form.image,{ attr:
-							{ class:"form-control",
-								placeholder: 'Choissiez une image',
-								autofocus: 'autofocus'
-							}
-						}) }}
+				{{ form_widget(form.image) }}
 			</p>
 			<p>
 				{{ form_label(form.continent, 'Continent:') }}
-				{{ form_widget(form.continent,{ attr:
-							{ class:"form-control",
-								placeholder: 'slectionner un Continent ',
-								autofocus: 'autofocus'
-							}
-						}) }}
+				{{ form_widget(form.continent) }}
 			</p>
 			<p>
 				<input type="submit" class="btn btn-info" value="Valider">

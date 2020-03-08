@@ -49,7 +49,7 @@ class ArticleController extends AbstractController
 			$id ? null : $entityManager->persist($model);
 			$entityManager->flush();
 
-			$message = $id ? "Le Article a été modifié" : "Le Article a été ajouté";
+			$message = $id ? "Le produit a été modifié" : "Le produit a été ajouté";
 			$this->addFlash('notice', $message);
 
 			// redirection
